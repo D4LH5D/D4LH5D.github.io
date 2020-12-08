@@ -67,7 +67,7 @@
 		  <iframe src='' class='ifr' id='frame'>
 
 			  </iframe>
-	
+	<button id='hideBtn' onclick='hideCode();' style='visibility:hidden;position:fixed;top:0%;right:0%;font-size:1.5em;background-color:red;'>x</button>
       </div>
         <iframe hidden class='ifr' src='' ></iframe>
 
@@ -77,6 +77,10 @@
       </footer>
   </body>
   <script>
+	  function hideCode(){
+		  location.reload();
+	  }
+
 	  function fill(){
 		  document.getElementById('frame').style.position = 'fixed';
 		  
@@ -85,7 +89,7 @@
 		  document.getElementById('frame').style.width = '100%';
 		  document.getElementById('frame').style.height = '100%';
 		  document.getElementById('frame').style.backgroundColor = 'transparent';
-		  
+		  document.getElementById('hideBtn').style.visibility = 'visible';
 	  }
 	  var games = ['Invade','Train sim 2021','Bus company manager','Crossy Road','Frog','Haunted House','Dodge','Pixel Art','Cannons'];
 	  var fr = [
