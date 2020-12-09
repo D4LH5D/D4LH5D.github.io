@@ -104,7 +104,7 @@ for(var i = 0;i<games.length;i++){
 }
 function view(e){
 	fav[e][0] +=1;
-	alert(fav[e][0]);
+	//alert(fav[e][0]);
 	
 	document.getElementById('viw').style.visibility='visible';
 	document.getElementById('viw').innerHTML = "<img src='assets/img/"+gameN[e]+"_screenshot.png' style='position:absolute;top:1%;left:1%;width:98%;height:30%;'/><div id='description' style='position:absolute;top:31%;left:1%;width:98%;height:58%;background-color:white;'><h2>"+games[e]+"</h2><hr><p>"+gameDesc[e]+"</p></div><a href='"+gamesrcs[e]+"'><button onclick='show("+e+");' style='position:absolute;bottom:10%;left:35%;width:30%;height:10%;background-color:lime;'>Play</button></a>";

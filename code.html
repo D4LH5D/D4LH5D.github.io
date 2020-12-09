@@ -44,6 +44,7 @@
 	.ifr{
 		width:80%;
 		height:70%;
+		background-color:white;
 	}
   </style>
   <body>
@@ -64,7 +65,7 @@
 		  Code for : <select onchange='check();' id='ch'>
 <option>--Select one--</option>
 			  </select><button onclick='fill();'>Fill Screen</button><br>
-		  <iframe src='' class='ifr' id='frame'>
+		  <iframe src='' style='background-color:white;' class='ifr' id='frame'>
 
 			  </iframe>
 	<button id='hideBtn' onclick='hideCode();' style='visibility:hidden;position:fixed;top:0%;right:0%;font-size:1.5em;background-color:red;'>x</button>
