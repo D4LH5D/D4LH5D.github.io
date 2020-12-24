@@ -7,6 +7,9 @@
       href="assets/logo.png">
   </head>
   <style>
+	  body{
+		  background-color:grey;
+	  }
     @font-face{
       font-family:font1;
       src:url('Steinberg.ttf');
@@ -41,6 +44,13 @@
 	.btn:hover{
 		background-color:lightgrey;
 	}
+	#tbl{
+		background-color:black;
+		color:white;
+	}
+	.menu_tr{
+		color:white;
+	}
   </style>
   <body>
     <header style='position:fixed;top:0%;left:22%;height:10%;width:80%;'>
@@ -48,11 +58,17 @@
       <hr>
     </header>
     
-        <div id='menu' style='position:fixed;top:0%;left:0%;height:100%;width:20%;background-color:dimgrey;'>
+        <div id='menu' style='position:fixed;top:0%;left:0%;height:100%;width:20%;background-color:black;'>
 <img src='assets/menu_icon.png' style='position:absolute;top:0%;left:0%;width:100%;'/>
-<button class='btn' style='position:absolute;top:30%;left:0%;width:100%;height:5%;background-color:transparent;border:none;font-size:2em;font-family:font1;' onclick='location.replace("index.html");'>Home</button>
+<table id='tbl' style='color:white;position:absolute;top:40%;left:0%;width:100%;height:auto;font-size:1.6em;overflow:hidden;'>
+<tr class='menu_tr'><td onclick='location.replace("index.html");'>Home</td>
+<tr class='menu_tr'><td><a  class='menu_tr' href='code.html'>Code</a></td>
+<tr class='menu_tr'><td><a  class='menu_tr' href='favourites.html'>Favourites</a></td>
+<tr class='menu_tr'><td><a  class='menu_tr'href='settings.html'>Settings</a></td>
 
-<a href='code.html'><button class='btn' style='position:absolute;top:40%;left:0%;width:100%;height:5%;background-color:transparent;border:none;font-size:2em;font-family:font1;'>Code</button></a>
+	</table>
+
+
 
 <a href='favourites.html'><button class='btn' style='position:absolute;top:50%;left:0%;width:100%;height:5%;background-color:transparent;border:none;font-size:2em;font-family:font1;' hidden>My Favourites</button></a>
 
