@@ -6,6 +6,12 @@
       type="image/png" 
       href="assets/logo.png">
   </head>
+  <script>
+	  var off = true;
+if(off == true){
+	location.replace('offlineMessage.html');
+}
+  </script>
   <style>
 	  body{
 		  background-color:grey;
@@ -21,7 +27,7 @@
     .gameTile{
       width:40%;
       height:10%;
-      background-color:white;
+      background-color:grey;
       
     }
     .gameTile_img{
@@ -63,7 +69,7 @@
 <table id='tbl' style='color:white;position:absolute;top:40%;left:0%;width:100%;height:auto;font-size:1.6em;overflow:hidden;'>
 <tr class='menu_tr'><td onclick='location.replace("index.html");'>Home</td>
 <tr class='menu_tr'><td><a  class='menu_tr' href='code.html'>Code</a></td>
-<tr class='menu_tr'><td><a  class='menu_tr' href='favourites.html'>Favourites</a></td>
+<tr class='menu_tr'><td><a  class='menu_tr' href='favourites.html'>Mindustry</a></td>
 <tr class='menu_tr'><td><a  class='menu_tr'href='settings.html'>Settings</a></td>
 
 	</table>
@@ -154,6 +160,9 @@ else{
 //var text = 'HEY! A new game is available...';
 //var notification = new Notification('JS Games', { body: text, icon: img });
 //});
-
+var off = true;
+if(off == true){
+	location.replace('offlineMessage.html');
+}
   </script>
 </html>

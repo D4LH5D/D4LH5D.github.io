@@ -1,7 +1,7 @@
 <!doctype HTML>
 <html>
   <head>
-    <title>Favourites</title>
+    <title>Mindustry Mods / Maps / Schematics</title>
 	<link rel="icon" 
       type="image/png" 
       href="assets/logo.png">
@@ -48,7 +48,7 @@
   </style>
   <body>
     <header style='position:fixed;top:0%;left:22%;height:10%;width:80%;'>
-      <h1>Favourites</h1>
+      <h1>Mindustry Mods / Maps / Schematics</h1>
       <hr>
     </header>
     
@@ -71,38 +71,6 @@
       </footer>
   </body>
   <script>
-	  var games = ['Invade','Train sim 2021','Bus company manager','Crossy Road','Frog','Haunted House','Dodge','Pixel Art'];
-	  var fr = [
-'https://editor.p5js.org/D4LH5D/sketches/37wYRQaxq',
-'https://editor.p5js.org/D4LH5D/sketches/kvaDjMW0K',
-'https://editor.p5js.org/D4LH5D/sketches/OEXM0QxtM',
-'https://editor.p5js.org/D4LH5D/sketches/Y_4qd3U-5',
-'https://editor.p5js.org/D4LH5D/sketches/ZKPsUybqF',
-'https://editor.p5js.org/D4LH5D/sketches/g-uBIY4Cp',
-'https://editor.p5js.org/D4LH5D/sketches/TWmLeFaEd',
-'https://editor.p5js.org/D4LH5D/sketches/U6cPP6E9B',
-	  ];
-var fav = localStorage.d4lh5d_fav;
-if(fav == 'undefined' || fav == 'reset'){
-document.getElementById('main').innerHTML = '<h1>No favourites yet...</h1>';
-
-}
-else{
-	fav=JSON.parse(fav);
-	alert(fav);
-	check();
-}
-function check(){
-	
-	for(var i =0;i<fav.length;i++){
-		//alert();
-		if(fav[i][0] > 5){
-		document.getElementById('main').innerHTML += "<a onclick='view("+i+")'><table class='gameTile' onclick=''><tr><td rowspan='2'><img src='assets/img/"+fav[i][3]+".png' class='gameTile_img'/></td><td>"+fav[i][1]+"</td><tr><td>"+fav[i][4]+"</td></table><br>";
-	}
-	}
-}
-function view(e){
-location.replace(fav[e][2]);
-}
+	  
   </script>
 </html>
