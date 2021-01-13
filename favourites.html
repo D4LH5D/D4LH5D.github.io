@@ -18,7 +18,7 @@
     .gameTile{
       width:40%;
       height:10%;
-      background-color:white;
+      background-color:rgba(0,0,0,0.1);
       
     }
     .gameTile_img{
@@ -26,7 +26,7 @@
       border:1px solid dimgrey;
     }
     a{
-      color:black;
+      color:white;
       text-decoration:none;
     }
     *{
@@ -34,8 +34,10 @@
     }
     body{
       margin:2%;
+	  background-color:grey;
+	  background-image:url('mindustry/background.png');
     }
-	table:hover{
+	.gameTile:hover{
 		background-color:lightgrey;
 	}
 	.btn:hover{
@@ -45,6 +47,9 @@
 		width:80%;
 		height:70%;
 	}
+	td{
+		padding-bottom:2em;
+	}
   </style>
   <body>
     <header style='position:fixed;top:0%;left:22%;height:10%;width:80%;'>
@@ -52,22 +57,31 @@
       <hr>
     </header>
     
-        <div id='menu' style='position:fixed;top:0%;left:0%;height:100%;width:20%;background-color:dimgrey;'>
-<img src='assets/menu_icon.png' style='position:absolute;top:0%;left:0%;width:100%;'/>
-<button class='btn' style='position:absolute;top:30%;left:0%;width:100%;height:5%;background-color:transparent;border:none;font-size:2em;font-family:font1;' onclick='location.replace("index.html");'>Home</button>
+        <div id='menu' style='position:fixed;top:0%;left:0%;height:100%;width:20%;background-color:black;'>
+<table id='tbl' style='color:white;position:absolute;top:0%;left:0%;width:100%;height:100%;font-size:1.6em;overflow:hidden;background-color:black;'>
+	<tr><td><img src='assets/menu_icon.png' style='width:100%;'/></td>
+<tr class='menu_tr'><td onclick='location.replace("index.html");'>Home</td>
+<tr class='menu_tr'><td><a  class='menu_tr' href='code.html'>Code</a></td>
+<tr class='menu_tr'><td><a  class='menu_tr' href='favourites.html'>Mindustry</a></td>
+<tr class='menu_tr'><td><a  class='menu_tr'href='settings.html'>Settings</a></td>
 
-<a href='code.html'><button class='btn' style='position:absolute;top:40%;left:0%;width:100%;height:5%;background-color:transparent;border:none;font-size:2em;font-family:font1;'>Code</button></a>
-
-<a href='settings.html'><button class='btn' style='position:absolute;top:95%;left:0%;width:100%;height:5%;background-color:transparent;border:none;font-size:2em;font-family:font1;border-top:2px solid white;' >Settings</button></a>
+	</table>
       </div>
       <div id='main' style='position:fixed;top:20%;left:22%;width:80%;height:75%;overflow:scroll;font-family:font1;'>
+		  	<table style='position:absolute;top:10%;left:5%;width:90%;height:auto;'>
+				<tr><td>Mods (currently v5 only)</td><td>Maps</td><td>Schematics</td>
+				<tr><td>
+					<a style='color:black;' href='mindustry/mods/farmdustry.html'><table class='gameTile' onclick=''><tr><td rowspan='2'><img src='mindustry/mods/icons/farmdustry.png' class='gameTile_img'/></td><td>Farmdustry</td><tr><td>Adds farming to the game.</td></table>
+					</td>
+					<td></td><td></td>
 
+		  	</table>
 	
       </div>
 
     <footer style='position:absolute;bottom:0%;left:20%;width:80%;height:5%;'>
       <hr>
-      This site is still under construction. (c) Daniel Harwood 2020
+      This site is still under construction. (c) Daniel Harwood 2021
       </footer>
   </body>
   <script>
