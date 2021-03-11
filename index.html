@@ -7,7 +7,7 @@
       href="assets/logo.png">
   </head>
   <script>
-	  var off = true;
+	  var off = false;
 if(off == true){
 	location.replace('offlineMessage.html');
 }
@@ -25,13 +25,13 @@ if(off == true){
      width:auto; 
     }
     .gameTile{
-      width:40%;
-      height:10%;
+      width:60%;
+      height:auto;
       background-color:grey;
       
     }
     .gameTile_img{
-      height:20%;
+      width:50%;
       border:1px solid dimgrey;
     }
     a{
@@ -79,7 +79,7 @@ if(off == true){
 
 
       </div>
-      <div id='main' style='position:fixed;top:20%;left:22%;width:80%;height:75%;overflow:scroll;'>
+      <div id='main' style='position:fixed;top:20%;left:30%;width:80%;height:75%;overflow:scroll;'>
         
       </div>
     
@@ -123,7 +123,7 @@ var gameDesc=[
 
 for(var i = 0;i<games.length;i++){
 	
-	document.getElementById('main').innerHTML += "<a onclick='view("+i+")'><table class='gameTile' onclick=''><tr><td rowspan='2'><img src='assets/img/"+gameN[i]+".png' class='gameTile_img'/></td><td>"+games[i]+"</td><tr><td>"+gameDesc[i]+"</td></table><br>";
+	document.getElementById('main').innerHTML += "<a onclick='view("+i+")'><table class='gameTile' onclick=''><tr><td rowspan='2'><img src='assets/img/"+gameN[i]+".png' class='gameTile_img'/></td><td>"+games[i]+"</td><tr><td style='color:lightgrey;'>"+gameDesc[i]+"</td></table><br>";
 }
 function view(e){
 	fav[e][0] +=1;
