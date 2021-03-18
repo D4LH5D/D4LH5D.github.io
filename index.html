@@ -25,13 +25,14 @@ if(off == true){
      width:auto; 
     }
     .gameTile{
-      width:60%;
+      width:30%;
       height:auto;
       background-color:grey;
+	  font-size:1em;
       
     }
     .gameTile_img{
-      width:50%;
+      width:30%;
       border:1px solid dimgrey;
     }
     a{
@@ -46,9 +47,11 @@ if(off == true){
     }
 	table:hover{
 		background-color:lightgrey;
+		color:black;
 	}
 	.btn:hover{
 		background-color:lightgrey;
+		color:black;
 	}
 	#tbl{
 		background-color:black;
@@ -60,7 +63,7 @@ if(off == true){
   </style>
   <body>
     <header style='position:fixed;top:0%;left:22%;height:10%;width:80%;'>
-      <h1>JS Games</h1>
+      <h1>A collection of Javascript Games and Programs</h1>
       <hr>
     </header>
     
@@ -79,7 +82,7 @@ if(off == true){
 
 
       </div>
-      <div id='main' style='position:fixed;top:20%;left:30%;width:80%;height:75%;overflow:scroll;'>
+      <div id='main' style='position:fixed;top:20%;left:22%;width:80%;height:75%;overflow:scroll;'>
         
       </div>
     
@@ -132,7 +135,7 @@ function view(e){
 	//alert(fav[e][0]);
 	
 	document.getElementById('viw').style.visibility='visible';
-	document.getElementById('viw').innerHTML = "<img src='assets/img/"+gameN[e]+"_screenshot.png' style='position:absolute;top:1%;left:1%;width:98%;height:30%;'/><div id='description' style='position:absolute;top:31%;left:1%;width:98%;height:58%;background-color:white;'><h2>"+games[e]+"</h2><hr><p>"+gameDesc[e]+"</p></div><a href='"+gamesrcs[e]+"'><button onclick='show("+e+");' style='position:absolute;bottom:10%;left:35%;width:30%;height:10%;background-color:lime;'>Play</button></a>";
+	document.getElementById('viw').innerHTML = "<img src='assets/img/"+gameN[e]+"_screenshot.png' style='position:absolute;top:1%;left:1%;width:98%;height:30%;'/><div id='description' style='position:absolute;top:31%;left:1%;width:98%;height:58%;background-color:white;'><h2>"+games[e]+"</h2><hr><p>"+gameDesc[e]+"</p></div><a href='"+gamesrcs[e]+"'><button onclick='show("+e+");' style='position:absolute;bottom:10%;left:35%;width:30%;height:10%;background-color:lime;border:none;transform:skew(2deg);'>Play</button></a>";
 	//alert(document.getElementById('viw').innerHTML);
 	saveFav();
 }
