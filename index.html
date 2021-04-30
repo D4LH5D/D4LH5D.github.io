@@ -15,6 +15,8 @@ if(off == true){
   <style>
 	  body{
 		  background-color:grey;
+		  background-image:url('assets/img/bg.jpg');
+		  background-size:100% auto;
 	  }
     @font-face{
       font-family:font1;
@@ -25,9 +27,10 @@ if(off == true){
      width:auto; 
     }
     .gameTile{
-      width:30%;
+      width:80%;
       height:auto;
-      background-color:grey;
+      background-color:transparent;
+	  color:white;
 	  font-size:1em;
       
     }
@@ -46,8 +49,12 @@ if(off == true){
       margin:2%;
     }
 	table:hover{
-		background-color:lightgrey;
+		background-color:rgba(200,200,200,0.3);
 		color:black;
+	}
+	#mainHeader:hover{
+		background-color:black;
+		color:white;
 	}
 	.btn:hover{
 		background-color:lightgrey;
@@ -60,14 +67,20 @@ if(off == true){
 	.menu_tr{
 		color:white;
 	}
+	table{
+		border-bottom:0.01em solid black;
+	}
   </style>
   <body>
-    <header style='position:fixed;top:0%;left:22%;height:10%;width:80%;'>
-      <h1>A collection of Javascript Games and Programs</h1>
+    <header id='head' style='position:fixed;top:0%;left:0%;height:10%;width:100%;background-color:black;'>
+		<table id='mainHeader' style='width:100%'><tr><td>
+		<button onclick='toggleMenu();'>MENU</button></td><td>
+      <h1 style='font-size:1em;color:white;text-align:center;'>Javascript Games and Programs</h1></td>
+	  </table>
       <hr>
     </header>
     
-        <div id='menu' style='position:fixed;top:0%;left:0%;height:100%;width:20%;background-color:black;'>
+        <div id='menu' style=' visibility:hidden;position:fixed;top:0%;left:0%;height:100%;width:20%;background-color:black;'>
 
 <table id='tbl' style='color:white;position:absolute;top:0%;left:0%;width:100%;height:100%;font-size:1.6em;overflow:hidden;'>
 	<tr><td><img src='assets/menu_icon.png' style='width:100%;'/></td>
@@ -86,7 +99,7 @@ if(off == true){
         
       </div>
     
-    <footer style='position:absolute;bottom:0%;left:20%;width:80%;height:5%;'>
+    <footer hidden style='position:absolute;bottom:0%;left:20%;width:80%;height:5%;'>
       <hr>
       This site is still under construction. (c) Daniel Harwood 2021
       </footer>
@@ -95,6 +108,20 @@ if(off == true){
 		  </div>
   </body>
   <script>
+	  var menu_show = false;
+	  function toggleMenu(){
+		  if(menu_show == false){
+			  document.getElementById('menu').style.visibility = 'visible';
+			  document.getElementById('head').style.left = '22%';
+			menu_show = true;
+			return;
+		  }
+		  if(menu_show == true){
+			  document.getElementById('menu').style.visibility = 'hidden';
+			  			  document.getElementById('head').style.left = '0%';
+							menu_show = false;
+		  }
+	  }
 	  	  var games = ['Reg Plate Generator','Invade','Train sim 2021','Bus company manager','Crossy Road','Frog','Haunted House','Haunted House Multiplayer','Dodge','Pixel Art','Cannons','ESI - Egg Supply Industry'];
 			var gameN = ['reg','invade','trainsim','busco','crossyroad','frog','Hhouse','Hhouse','dodge','pixelArt','cannons','esi'];
 var gamesrcs=[
