@@ -4,3 +4,40 @@
 		<title>D4LH5D | Coding Tools</title>
 		<link rel='icon' href='../favicon.png'/>
 	</head>
+	<style>
+		body{
+		padding:0px;
+		margin:0px;
+		}
+		td{
+		text-align:left;
+		}
+	</style>
+	<body>
+<header style='width:100%;height:auto;background-color:black;'>
+<table cellspacing='0px' style='width:100%;'>
+<tr><td style='text-align:left;'><img src='../logo_studios.jpg' style='width:10%;'/></td><td style='font-size:2em;color:white;font-weight:bold;font-family:arial;'>Coding Tools</td>
+</table>
+</header>
+<h1>Here is a list of useful tools for Javascript coding:</h1>
+<ul>
+<li><a href='https://p5js.org/'>p5.js - A javascript library</a>
+<br><br>
+<li><a href='https://editor.p5js.org/D4LH5D/collections/APTcsEyLe'>View the code for all the games on this website.</a>
+</ul>
+<br>
+<h3>Key Press Detector</h3>
+<hr align='left' style='width:40%;'>
+<div id='keyOutput'>
+Press a key...
+</div>
+
+
+	</body>
+	<script>
+document.onkeypress = function (e) {
+    e = e || window.event;
+    document.getElementById('keyOutput').innerHTML = 'You pressed : <table style="width:10%;" cellspacing="0px"><tr style="background-color:lightgrey;"><td>Key</td><td>KeyCode</td><tr><td>'+e.key+'</td><td>'+e.keyCode+'</td>';
+}
+	</script>
+</html>
