@@ -14,6 +14,13 @@
 ::-webkit-scrollbar{
 	display:none;
 }
+@font-face{
+	font-family:studios;
+	src:url('assets/d4lh5d.ttf')
+}
+*{
+	font-family:studios;
+}
 </style>
 <body>
 <button disabled class='mainWindow'>
@@ -24,11 +31,23 @@
 <img src='assets/adverts/advert3.png' id='advert' style='position:absolute;top:0%;left:0%;width:100%;height:100%;'/>
 </button>
 <button disabled class='gamesWindow' id='gamesWindow'>
+	<h1 style='font-family:studios;font-size:1em;'>Web Games</h1><hr>
 list of apps and games go here
 </button>
 
 //--- IGNORE ---
 <div style='visibility:hidden;' id='landscapeStyling'>
+	::-webkit-scrollbar{
+	display:none;
+}
+@font-face{
+	font-family:studios;
+	src:url('assets/d4lh5d.ttf')
+}
+*{
+	font-family:studios;
+	text-transform:uppercase;
+}
 body{
 background-color:black;
 }
@@ -93,6 +112,17 @@ color:black;
 }
 </div>
 <div style='visibility:hidden;' id='portraitStyling'>
+	::-webkit-scrollbar{
+	display:none;
+}
+@font-face{
+	font-family:studios;
+	src:url('assets/d4lh5d.ttf')
+}
+*{
+	font-family:studios;
+	text-transform:uppercase;
+}
 .mainWindow{
 position:absolute;
 top:0%;
@@ -168,11 +198,11 @@ setTimeout(adverts,6000);
 }
 var games = [
 //format -> [display name, path, icon]
-['Farm Sim 2','https://d4lh5d.github.io/farmsim2','assets/games/farmsim2.png',1],
-['Racing','https://d4lh5d.github.io/racing','assets/games/farmsim2.png',1],
+//['Farm Sim 2','https://d4lh5d.github.io/farmsim2','assets/games/farmsim2.png',1],
+//['Racing','https://d4lh5d.github.io/racing','assets/games/farmsim2.png',1],
 
 ['Reg Plate Generator','https://editor.p5js.org/D4LH5D/present/alkN8l_6l','assets/games/reg.png'],
-['Invade','https://editor.p5js.org/D4LH5D/present/37wYRQaxq','assets/games/invade.png'],
+['Invade','https://editor.p5js.org/D4LH5D/present/iG__0DBmE','assets/games/invade.png'],
 ['Train Sim 2021','https://editor.p5js.org/D4LH5D/present/kvaDjMW0K','assets/games/trainsim.png'],
 ['Bus Company Manager','https://editor.p5js.org/D4LH5D/present/OEXM0QxtM','assets/games/busco.png'],
 ['Crossy Road','https://editor.p5js.org/D4LH5D/present/Y_4qd3U-5','assets/games/crossyroad.png'],
